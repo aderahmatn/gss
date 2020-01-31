@@ -31,7 +31,7 @@ class Auth extends CI_Controller {
 				$row = $query->row();
 				$params = array(
 					'nik' => $row->Nik,
-					'role' =>$row->IdRole,
+					'role' =>$row->Level,
 					'uname' =>$row->Username,
 					'status' =>'login'
 				);

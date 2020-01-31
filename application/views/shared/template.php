@@ -91,7 +91,7 @@
           <?php if ($this->session->userdata('role') == 1) { ?> 
             <li class="nav-item 
             <?php echo $this->uri->segment(1) == 'planning' ? 'active': '' ?>
-            <?php echo $this->uri->segment(1) == 'product' ? 'active': '' ?>
+            <?php echo $this->uri->segment(1) == 'mesin' ? 'active': '' ?>
             <?php echo $this->uri->segment(1) == 'users' ? 'active': '' ?>
             ">
             <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#masterdata" aria-expanded="true" aria-controls="masterdata">
@@ -101,7 +101,7 @@
             <div id="masterdata" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
               <div class="bg-white py-2 collapse-inner rounded">
                 <a class="collapse-item <?php echo $this->uri->segment(1) == 'planning' ? 'active': '' ?>" href="<?php echo site_url('planning') ?>"><i class="fas fa-cubes"></i>  Data Barang</a>
-                <a class="collapse-item <?php echo $this->uri->segment(1) == 'product' ? 'active': '' ?>" href="<?php echo site_url('product') ?>"><i class="fas fa-hammer"></i> Data Mesin</a>
+                <a class="collapse-item <?php echo $this->uri->segment(1) == 'mesin' ? 'active': '' ?>" href="<?php echo site_url('mesin') ?>"><i class="fas fa-hammer"></i> Data Mesin</a>
                 <a class="collapse-item <?php echo $this->uri->segment(1) == 'product' ? 'active': '' ?>" href="<?php echo site_url('product') ?>"><i class="fas fa-fw fa-crosshairs"></i> No SPP</a>
                 <a class="collapse-item <?php echo $this->uri->segment(1) == 'users' ? 'active': '' ?>" href="<?php echo site_url('users') ?>"><i class="fas fa-fw fa-users"></i>  Data Karyawan</a>
               </div>

@@ -4,7 +4,7 @@
 				<h6 class="m-0 font-weight-bold text-primary">Data User</h6>
 				<div class="button">
 					<a class="btn btn-primary btn-sm" type="button" href="<?=base_url('users/create') ?>"><i class="fas fa-plus"></i>
-						New User
+						Tambah User
 					</a>
 				</div>
 			</div>
