@@ -40,7 +40,19 @@ class Mesin_m extends CI_Model {
 		$this->Merk = $post['merk'];
 		$this->Tonase = $post['tonase'];
 		$this->db->insert($this->_table, $this);
+
 	}
+
+	public function update($post)
+	{
+		$post = $this->input->post();
+		$this->IdMesin = $post['id'];
+		$this->NoMc = $post['nomc'];
+		$this->Merk = $post['merk'];
+		$this->Tonase = $post['tonase'];
+		$this->db->update($this->_table, $this, array('IdMesin' => $post['id']));
+	}
+	
 	public function GetById($id)
 	{
 		return $this->db->get_where($this->_table,["IdMesin" => $id])->row();
