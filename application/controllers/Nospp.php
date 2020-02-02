@@ -8,6 +8,7 @@ class Nospp extends CI_Controller {
 		parent::__construct();
 		check_not_login();
 		$this->load->model('nospp_m');
+		$this->load->model('barang_m');
 	}
 
 	public function index()
@@ -27,7 +28,13 @@ class Nospp extends CI_Controller {
 
 		if ($validation->run() == FALSE)
 		{
-			$this->template->load('shared/template', 'nospp/create');
+			$nomor = $this->nospp_m->CheckNoSpp();
+        // contoh JRD0004, angka 3 adalah awal pengambilan angka, dan 4 jumlah angka yang diambil
+			$nourut = substr($nomor, 3, 4);
+			$newnospp = $nourut + 1;
+			$data= array('No_SPP' => $newnospp);
+			$data['barang']=$this->barang_m->GetAll();
+			$this->template->load('shared/template', 'nospp/create', $data);
 		}
 		else
 		{

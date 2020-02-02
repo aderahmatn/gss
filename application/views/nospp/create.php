@@ -6,7 +6,7 @@
 			<div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
 				<h6 class="m-0 font-weight-bold text-primary">Tambah No SPP</h6>
 				<div class="button">
-					<a class="btn btn-light text-primary btn-sm" type="button" href="<?=base_url('barang') ?>"><i class="fas fa-arrow-circle-left"></i>
+					<a class="btn btn-light text-primary btn-sm" type="button" href="<?=base_url('nospp') ?>"><i class="fas fa-arrow-circle-left"></i>
 						Back
 					</a>
 				</div>
@@ -16,69 +16,45 @@
 				<div class="card-body">
 					<form action="" method="post">
 						<div class="form-group row">
+							<label for="nospp" class="col-sm-2 col-form-label-sm">No SPP</label>
+							<div class="col-sm-6">
+								<input type="hidden" name="id" id="id" value="<?=uniqid('SPP')?>" >
+								<input type="text" class="form-control form-control-sm <?php echo form_error('nospp')?'is-invalid':''?>" name="nospp" id="nospp" autocomplete="off" aria-describedby="nospphelp" value="AHM<?= sprintf("%04s", $No_SPP) ?>" readonly>
+								<div class="invalid-feedback">
+									<?php echo form_error('nospp'); ?>
+								</div>
+							</div>
+							<div class="col-sm-4">
+								<small id="nospphelp" class="form-text text-muted"></small>`
+							</div>
+						</div>
+						<div class="form-group row">
 							<label for="kodebrg" class="col-sm-2 col-form-label-sm">Kode Barang</label>
 							<div class="col-sm-6">
-								<input type="hidden" name="id" id="id" value="<?=uniqid('BRG')?>" >
-
-								<input type="text" class="form-control form-control-sm <?php echo form_error('kodebrg')?'is-invalid':''?>" name="kodebrg" id="kodebrg" autocomplete="off" aria-describedby="kodebrghelp" value="<?=set_value('kodebrg')?>">
+								<select class="form-control form-control-sm <?php echo form_error('kodebrg')?'is-invalid':''?>" name="kodebrg" id="kodebrg" aria-describedby="kodebrghelp">
+									<option selected hidden value="">Pilih Barang..</option>
+									<?php foreach ($barang as $dt) :?>
+										<option value="<?=$dt->IdBarang?>" <?=set_value('kodebrg') == "$dt->IdBarang" ? "selected" : ''?>><?=ucfirst($dt->NamaBarang);?> - <small><?=ucfirst($dt->IdBarang);?></small> </option>
+									<?php endforeach ?>
+								</select>
 								<div class="invalid-feedback">
-									<?php echo form_error('kodebrg'); ?>
+									<?php echo form_error('position'); ?>
 								</div>
 							</div>
 							<div class="col-sm-4">
-								<small id="kodebrghelp" class="form-text text-muted">Masukan Kode Barang Baru</small>`
+								<small id="positionhelp" class="form-text text-muted"></small>
 							</div>
 						</div>
-
 						<div class="form-group row">
-							<label for="namabrg" class="col-sm-2 col-form-label-sm">Nama Barang</label>
+							<label for="qtyplan" class="col-sm-2 col-form-label-sm">Quantity Plannning</label>
 							<div class="col-sm-6">
-								<input type="text" class="form-control form-control-sm <?php echo form_error('namabrg')?'is-invalid':''?>" name="namabrg" id="namabrg" autocomplete="off" aria-describedby="namabrghelp" value="<?=set_value('namabrg')?>" >
+								<input type="number" class="form-control form-control-sm <?php echo form_error('qtyplan')?'is-invalid':''?>" name="qtyplan" id="qtyplan" autocomplete="off" aria-describedby="qtyplanhelp" value="<?=set_value('qtyplan')?>" >
 								<div class="invalid-feedback">
-									<?php echo form_error('namabrg'); ?>
+									<?php echo form_error('qtyplan'); ?>
 								</div>
 							</div>
 							<div class="col-sm-4">
-								<small id="namabrghelp" class="form-text text-muted">Masukan Nama Barang Baru</small>
-							</div>
-						</div>
-
-						<div class="form-group row">
-							<label for="qty" class="col-sm-2 col-form-label-sm">Quantity/Box</label>
-							<div class="col-sm-6">
-								<input type="number" class="form-control form-control-sm <?php echo form_error('qty')?'is-invalid':''?>" name="qty" id="qty" autocomplete="off" aria-describedby="qtyhelp" value="<?=set_value('qty')?>" >
-								<div class="invalid-feedback">
-									<?php echo form_error('qty'); ?>
-								</div>
-							</div>
-							<div class="col-sm-4">
-								<small id="qtyhelp" class="form-text text-muted">Masukan Quantity per-box</small>
-							</div>
-						</div>
-
-						<div class="form-group row">
-							<label for="box" class="col-sm-2 col-form-label-sm">Box</label>
-							<div class="col-sm-6">
-								<input type="text" class="form-control form-control-sm <?php echo form_error('box')?'is-invalid':''?>" name="box" id="box" autocomplete="off" aria-describedby="boxhelp" value="<?=set_value('box')?>" >
-								<div class="invalid-feedback">
-									<?php echo form_error('box'); ?>
-								</div>
-							</div>
-							<div class="col-sm-4">
-								<small id="boxhelp" class="form-text text-muted"></small>
-							</div>
-						</div>
-
-						<div class="form-group row">
-							<label for="label" class="col-sm-2 col-form-label-sm">Label</label>
-							<div class="col-sm-6">
-								<input type="text" class="form-control form-control-sm <?php echo form_error('label')?'is-invalid':''?>" name="label" id="label" autocomplete="off" aria-describedby="labelhelp" value="<?=set_value('label')?>" >
-								<div class="invalid-feedback">
-									<?php echo form_error('label'); ?>
-								</div>
-							</div>
-							<div class="col-sm-4">
-								<small id="labelhelp" class="form-text text-muted"></small>
+								<small id="qtyplanhelp" class="form-text text-muted"></small>
 							</div>
 						</div>
 						<div class="card-footer text-right">

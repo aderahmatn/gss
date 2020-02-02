@@ -38,8 +38,8 @@ class Nospp_m extends CI_Model {
 		$post = $this->input->post();
 		$this->IdSpp = $post['id'];
 		$this->NoSpp = $post['nospp'];
-		$this->IdBarang = $post['idbrg'];
-		$this->QtyPlan = $post['qty'];
+		$this->IdBarang = $post['kodebrg'];
+		$this->QtyPlan = $post['qtyplan'];
 		$this->db->insert($this->_table, $this);
 	}
 
@@ -48,8 +48,8 @@ class Nospp_m extends CI_Model {
 		$post = $this->input->post();
 		$this->IdSpp = $post['id'];
 		$this->NoSpp = $post['nospp'];
-		$this->IdBarang = $post['idbrg'];
-		$this->QtyPlan = $post['qty'];
+		$this->IdBarang = $post['kodebrg'];
+		$this->QtyPlan = $post['qtyplan'];
 		$this->db->update($this->_table, $this, array('IdSpp' => $post['id']));
 	}
 
@@ -63,7 +63,12 @@ class Nospp_m extends CI_Model {
 		return $this->db->delete($this->_table, array('IdSpp' => $id));
 	}
 
-	
+	public function CheckNoSpp()
+    {
+        $query = $this->db->query("SELECT MAX(NoSpp) as NoSPP from tspp");
+        $hasil = $query->row();
+        return $hasil->NoSPP;
+    }
 
 }
 
