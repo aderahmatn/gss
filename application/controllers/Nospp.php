@@ -73,6 +73,7 @@ class Nospp extends CI_Controller {
 			$this->session->set_flashdata('error', 'No SPP tidak ditemukan!');
 			redirect('nospp','refresh');
 		}
+		$data['barang']=$this->barang_m->GetAll();
 		$this->template->load('shared/template', 'nospp/edit', $data);
 	}
 
