@@ -38,7 +38,7 @@
 									<?php endforeach ?>
 								</select>
 								<div class="invalid-feedback">
-									<?php echo form_error('position'); ?>
+									<?php echo form_error('kodebrg'); ?>
 								</div>
 							</div>
 							<div class="col-sm-4">
