@@ -33,6 +33,18 @@ class Nospp_m extends CI_Model {
 		return $query->result();
 	}
 
+	public function GetByIdJoin($id)
+	{
+		$this->db->select('*');
+		$this->db->select('tspp.IdSpp');
+		$this->db->from($this->_table);
+		$this->db->join('tbarcode', 'tbarcode.IdSpp = tspp.IdSpp', 'left');
+		$this->db->join('tbarang', 'tbarang.IdBarang = tspp.IdBarang', 'left');
+		$this->db->where('tspp.IdSpp', $id);
+		$query = $this->db->get();
+		return $query->row();
+	}
+
 	public function add()
 	{
 		$post = $this->input->post();

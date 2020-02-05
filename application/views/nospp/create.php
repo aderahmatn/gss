@@ -29,10 +29,10 @@
 							</div>
 						</div>
 						<div class="form-group row">
-							<label for="kodebrg" class="col-sm-2 col-form-label-sm">Kode Barang</label>
+							<label for="kodebrg" class="col-sm-2 col-form-label-sm">Kode Part</label>
 							<div class="col-sm-6">
 								<select class="form-control form-control-sm <?php echo form_error('kodebrg')?'is-invalid':''?>" name="kodebrg" id="kodebrg" aria-describedby="kodebrghelp">
-									<option selected hidden value="">Pilih Barang..</option>
+									<option selected hidden value="">Pilih Part..</option>
 									<?php foreach ($barang as $dt) :?>
 										<option value="<?=$dt->IdBarang?>" <?=set_value('kodebrg') == "$dt->IdBarang" ? "selected" : ''?>><?=ucfirst($dt->NamaBarang);?> - <small><?=ucfirst($dt->IdBarang);?></small> </option>
 									<?php endforeach ?>

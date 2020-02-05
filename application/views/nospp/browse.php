@@ -15,8 +15,8 @@
 								<tr>
 									<th>No</th>
 									<th>No SPP</th>
-									<th>Kode Barang</th>
-									<th>Nama Barang</th>
+									<th>Kode Part</th>
+									<th>Nama Part</th>
 									<th>Qty Planning</th>
 									<th>Option</th>
 								</tr>

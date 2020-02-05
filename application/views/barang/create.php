@@ -4,7 +4,7 @@
 		<div class="card shadow mb-4">
 			<!-- Card Header - Accordion -->
 			<div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-				<h6 class="m-0 font-weight-bold text-primary">Tambah Barang</h6>
+				<h6 class="m-0 font-weight-bold text-primary">Tambah Part</h6>
 				<div class="button">
 					<a class="btn btn-light text-primary btn-sm" type="button" href="<?=base_url('barang') ?>"><i class="fas fa-arrow-circle-left"></i>
 						Back
@@ -16,7 +16,7 @@
 				<div class="card-body">
 					<form action="" method="post">
 						<div class="form-group row">
-							<label for="kodebrg" class="col-sm-2 col-form-label-sm">Kode Barang</label>
+							<label for="kodebrg" class="col-sm-2 col-form-label-sm">Kode Part</label>
 							<div class="col-sm-6">
 								<input type="hidden" name="id" id="id" value="<?=uniqid('BRG')?>" >
 
@@ -26,12 +26,12 @@
 								</div>
 							</div>
 							<div class="col-sm-4">
-								<small id="kodebrghelp" class="form-text text-muted">Masukan Kode Barang Baru</small>`
+								<small id="kodebrghelp" class="form-text text-muted">Masukan Kode Part Baru</small>`
 							</div>
 						</div>
 
 						<div class="form-group row">
-							<label for="namabrg" class="col-sm-2 col-form-label-sm">Nama Barang</label>
+							<label for="namabrg" class="col-sm-2 col-form-label-sm">Nama Part</label>
 							<div class="col-sm-6">
 								<input type="text" class="form-control form-control-sm <?php echo form_error('namabrg')?'is-invalid':''?>" name="namabrg" id="namabrg" autocomplete="off" aria-describedby="namabrghelp" value="<?=set_value('namabrg')?>" >
 								<div class="invalid-feedback">
@@ -39,7 +39,7 @@
 								</div>
 							</div>
 							<div class="col-sm-4">
-								<small id="namabrghelp" class="form-text text-muted">Masukan Nama Barang Baru</small>
+								<small id="namabrghelp" class="form-text text-muted">Masukan Nama Part Baru</small>
 							</div>
 						</div>
 

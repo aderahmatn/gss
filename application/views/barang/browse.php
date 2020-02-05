@@ -1,10 +1,10 @@
 <!-- DataTales Example -->
 			<div class="card shadow mb-4">
 				<div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-				<h6 class="m-0 font-weight-bold text-primary">Data Barang</h6>
+				<h6 class="m-0 font-weight-bold text-primary">Data Part</h6>
 				<div class="button">
 					<a class="btn btn-primary btn-sm" type="button" href="<?=base_url('barang/create') ?>"><i class="fas fa-plus"></i>
-						Tambah Barang
+						Tambah Part
 					</a>
 				</div>
 			</div>
@@ -14,8 +14,8 @@
 							<thead>
 								<tr>
 									<th>No</th>
-									<th>Kode</th>
-									<th>Nama Barang</th>
+									<th>Kode Part</th>
+									<th>Nama Part</th>
 									<th>Quantity</th>
 									<th>Box</th>
 									<th>Label</th>

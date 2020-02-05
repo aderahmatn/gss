@@ -71,21 +71,31 @@
           ">
           <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#masterdata" aria-expanded="true" aria-controls="masterdata">
             <i class="fas fa-server"></i>
-            <span>Master Data</span>
+            <span>Master</span>
           </a>
           <div id="masterdata" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
             <div class="bg-white py-2 collapse-inner rounded">
-              <a class="collapse-item <?php echo $this->uri->segment(1) == 'barang' ? 'active': '' ?>" href="<?php echo site_url('barang') ?>"><i class="fas fa-cubes"></i>  Data Barang</a>
-              <a class="collapse-item <?php echo $this->uri->segment(1) == 'mesin' ? 'active': '' ?>" href="<?php echo site_url('mesin') ?>"><i class="fas fa-hammer"></i> Data Mesin</a>
-              <a class="collapse-item <?php echo $this->uri->segment(1) == 'nospp' ? 'active': '' ?>" href="<?php echo site_url('nospp') ?>"><i class="fas fa-fw fa-crosshairs"></i> No SPP</a>
-              <a class="collapse-item <?php echo $this->uri->segment(1) == 'users' ? 'active': '' ?>" href="<?php echo site_url('users') ?>"><i class="fas fa-fw fa-users"></i>  Data Karyawan</a>
+              <a class="collapse-item <?php echo $this->uri->segment(1) == 'barang' ? 'active': '' ?>" href="<?php echo site_url('barang') ?>"><i class="fas fa-cubes"></i>  Master Barang</a>
+              <a class="collapse-item <?php echo $this->uri->segment(1) == 'mesin' ? 'active': '' ?>" href="<?php echo site_url('mesin') ?>"><i class="fas fa-hammer"></i> Master Mesin</a>
+              <a class="collapse-item <?php echo $this->uri->segment(1) == 'nospp' ? 'active': '' ?>" href="<?php echo site_url('nospp') ?>"><i class="fas fa-fw fa-crosshairs"></i> Master No SPP</a>
+              <a class="collapse-item <?php echo $this->uri->segment(1) == 'users' ? 'active': '' ?>" href="<?php echo site_url('users') ?>"><i class="fas fa-fw fa-users"></i>  Master Karyawan</a>
             </div>
           </div>
+        </li>
+        <li class="nav-item <?php echo $this->uri->segment(1) == 'barcode' ? 'active': '' ?>">
+        <a class="nav-link" href="<?php echo base_url('barcode'); ?>">
+          <i class="fas fa-fw fa-barcode"></i>
+          <span>Label Barcode</span></a>
+        </li>
+        <li class="nav-item <?php echo $this->uri->segment(1) == 'spb' ? 'active': '' ?>">
+        <a class="nav-link" href="<?php echo base_url('spb'); ?>">
+          <i class="fas fa-file-signature"></i>
+          <span>Pembuatan SPB</span></a>
         </li>
         <!-- Nav Item - Pages Collapse Menu -->
         <li class="nav-item <?php echo $this->uri->segment(1) == 'report' ? 'active': '' ?>">
           <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#report" aria-expanded="true" aria-controls="report">
-            <i class="fas fa-file"></i>
+            <i class="fas fa-file-alt"></i>
             <span>Report</span>
           </a>
           <div id="report" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
