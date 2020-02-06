@@ -7,6 +7,7 @@ class Barcode extends CI_Controller {
 	{
 		parent::__construct();
 		check_not_login();
+		check_role_admin();
 		$this->load->model('nospp_m');
 		$this->load->model('barcode_m');
 	}
@@ -44,6 +45,10 @@ class Barcode extends CI_Controller {
 	public function printbar($id=NULL)
 	{
 		$data['barcode']=$this->barcode_m->GetByIdJoin($id);
+		if (!$data['barcode']) {
+			$this->session->set_flashdata('error', 'Data Barcode tidak ditemukan!');
+			redirect('barcode','refresh');
+		}
 		$this->template->load('shared/template', 'barcode/print', $data);
 	}
 

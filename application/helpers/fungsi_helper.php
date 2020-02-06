@@ -17,7 +17,7 @@ function check_not_login(){
 	}
 }
 
-function check_role(){
+function check_role_admin(){
 	$CI =& get_instance();
 	$user_session = $CI->session->userdata('role');
 	if ($user_session != '1') {

@@ -6,6 +6,7 @@ class Users extends CI_Controller {
 	{
 		parent::__construct();
 		check_not_login();
+		check_role_admin();
 		$this->load->model('users_m');
 	}
 

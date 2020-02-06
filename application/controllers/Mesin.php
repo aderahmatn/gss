@@ -6,6 +6,7 @@ class Mesin extends CI_Controller {
 	{
 		parent::__construct();
 		check_not_login();
+		check_role_admin();
 		$this->load->model('mesin_m');
 	}
 

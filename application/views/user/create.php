@@ -76,6 +76,7 @@
 											<option value = "" selected hidden>Pilih...</option>
 											<option value="1" <?=set_value('level') == "1" ? "selected" : ''?> >Admin</option>
 											<option value="2" <?=set_value('level') == "2" ? "selected" : ''?> >Operator Handling</option>
+											<option value="3" <?=set_value('level') == "3" ? "selected" : ''?> >Supervisor</option>
 										</select>
 										<small id="level" class="form-text text-muted">Pilih level untuk menentukan hak akses halaman.</small>
 										

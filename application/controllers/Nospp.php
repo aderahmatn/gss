@@ -7,6 +7,7 @@ class Nospp extends CI_Controller {
 	{
 		parent::__construct();
 		check_not_login();
+		check_role_admin();
 		$this->load->model('nospp_m');
 		$this->load->model('barang_m');
 	}

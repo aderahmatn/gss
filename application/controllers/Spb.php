@@ -63,6 +63,11 @@ class Spb extends CI_Controller {
 
 	public function printSpb($id)
 	{
+		$data['spb']= $this->spb_m->getById($id);
+		if (!$data['spb']) {
+			$this->session->set_flashdata('error', 'Data SPB tidak ditemukan!');
+			redirect('spb','refresh');
+		}
 		
 		$pdf = new FPDF('L','mm',array(212,120));
         // membuat halaman baru
