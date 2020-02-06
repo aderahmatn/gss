@@ -38,8 +38,8 @@
 														<td><?=$barcode->KodeBarang?></td>
 													</tr>
 													<tr>
-														<th>QUANTITY</th>
-														<td><?=$barcode->Qty?></td>
+														<th>ACTUAL QTY</th>
+														<td><?=$barcode->ActualQty?></td>
 													</tr>
 													<tr>
 														<th>LOT NO</th>
@@ -53,12 +53,10 @@
 												</tbody>
 											</table>
 											<?php 
-
-														$generator = new \Picqer\Barcode\BarcodeGeneratorPNG();
-
-														echo '<img src="data:image/png;base64,' . base64_encode($generator->getBarcode($barcode->idbarcode, $generator::TYPE_CODE_128,1.3,40)) . '">';
-														echo strtoupper($barcode->idbarcode) ;
-														?>
+											$generator = new \Picqer\Barcode\BarcodeGeneratorPNG();
+											echo '<img src="data:image/png;base64,' . base64_encode($generator->getBarcode($barcode->idbarcode, $generator::TYPE_CODE_128,1.3,40)) . '">';
+											echo strtoupper($barcode->idbarcode) ;
+											?>
 										</div>
 									</div>
 								</div>
@@ -67,12 +65,10 @@
 					</div>
 				</div>
 				<div class="card-footer text-right">
-
-					<button type="submit" class="btn btn-primary btn-sm shadow-sm" target="_blank" onclick="printDiv('printableArea')"><i class="fas fa-print fa-sm"></i> Print</button>
+					<button type="submit" class="btn btn-primary btn-sm shadow-sm"  onclick="printDiv('printableArea')"><i class="fas fa-print fa-sm"></i> Print</button>
 				</div>
 			</div>
-		</div>
-		
+		</div>	
 	</div>
 </div>
 

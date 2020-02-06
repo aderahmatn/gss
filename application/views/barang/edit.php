@@ -46,7 +46,7 @@
 						<div class="form-group row">
 							<label for="qty" class="col-sm-2 col-form-label-sm">Quantity/Box</label>
 							<div class="col-sm-6">
-								<input type="number" class="form-control form-control-sm <?php echo form_error('qty')?'is-invalid':''?>" name="qty" id="qty" autocomplete="off" aria-describedby="qtyhelp" value="<?=$this->input->post('qty')?$this->input->post('qty'):$barang->Qty ?>" >
+								<input type="text" class="form-control form-control-sm <?php echo form_error('qty')?'is-invalid':''?>" name="qty" id="qty" autocomplete="off" aria-describedby="qtyhelp" value="<?=$this->input->post('qty')?$this->input->post('qty'):$barang->Qty ?>" >
 								<div class="invalid-feedback">
 									<?php echo form_error('qty'); ?>
 								</div>

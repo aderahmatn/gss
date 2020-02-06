@@ -13,27 +13,29 @@
 						<table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
 							<thead>
 								<tr>
-									<th>No</th>
+									<th></th>
 									<th>Barcode</th>
 									<th>NoSpp</th>
 									<th>Nama Part</th>
 									<th>Lot No</th>
-									<th>Qty Planning</th>
-									<th>Option</th>
+									<th>Q Plan</th>
+									<th>Q Act</th>
+									<th></th>
 								</tr>
 							</thead>
 							<tbody>
-								<?php $no=1;
+								<?php 
 								foreach ($brd as $dt) :?>
 									<tr>
-										<td><?php echo $no++ ?></td>
+										<td><a href="<?php echo site_url('barcode/printbar/'.$dt->idbarcode) ?>"
+											class="btn btn-sm btn-secondary"><i class="fas fa-print"></i></a></td>
 										<td><?php echo strtoupper($dt->idbarcode)  ?></td>
 										<td><?php echo strtoupper($dt->NoSpp)  ?></td>
 										<td><?php echo strtoupper($dt->NamaBarang) ?></td>
 										<td><?php echo strtoupper($dt->Date)."-". strtoupper($dt->Lot)?></td>
 										<td><?php echo strtoupper($dt->QtyPlan) ?></td>
-										<td><a href="<?php echo site_url('barcode/printbar/'.$dt->idbarcode) ?>"
-											class="btn btn-sm btn-primary"><i class="fas fa-barcode"></i> Cetak</a>
+										<td><?php echo strtoupper($dt->ActualQty) ?></td>
+										<td>
 											<a onclick="deleteConfirm('<?=site_url('barcode/delete/'.$dt->idbarcode)?>')" href="#!" class="btn btn-sm btn-danger"><i class="fas fa-trash"></i></a>
 											</td>
 										</tr>

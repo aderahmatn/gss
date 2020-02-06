@@ -24,10 +24,10 @@
 						<div class="form-group row">
 							<label for="idspp" class="col-sm-2 col-form-label-sm">No SPP</label>
 							<div class="col-sm-6">
-								<select class="form-control form-control-sm <?php echo form_error('nospp')?'is-invalid':''?>" name="idspp" id="idspp" aria-describedby="idspphelp">
+								<select class="form-control form-control-sm <?php echo form_error('idspp')?'is-invalid':''?>" name="idspp" id="idspp" aria-describedby="idspphelp">
 									<option selected hidden value="">Pilih No SPP..</option>
 									<?php foreach ($nospp as $dt) :?>
-										<option value="<?=$dt->IdSpp?>" <?=set_value('nospp') == "$dt->IdSpp" ? "selected" : ''?>><?=ucfirst($dt->NoSpp);?> - <small><?=ucfirst($dt->NamaBarang);?></small> </option>
+										<option value="<?=$dt->IdSpp?>" <?=set_value('nospp') == "$dt->IdSpp" ? "selected" : ''?>><?=ucfirst($dt->NoSpp);?> - <?=ucfirst($dt->NamaBarang);?> - <?=ucfirst($dt->QtyPlan);?></option>
 									<?php endforeach ?>
 								</select>
 								<div class="invalid-feedback">
@@ -36,6 +36,18 @@
 							</div>
 							<div class="col-sm-4">
 								<small id="idspphelp" class="form-text text-muted"></small>
+							</div>
+						</div>
+						<div class="form-group row">
+							<label for="actualqty" class="col-sm-2 col-form-label-sm">Actual Qty</label>
+							<div class="col-sm-6">
+								<input type="text" class="form-control form-control-sm <?php echo form_error('actualqty')?'is-invalid':''?>" name="actualqty" id="actualqty" autocomplete="off" aria-describedby="actualqtyhelp" value="<?=set_value('actualqty')?>" >
+								<div class="invalid-feedback">
+									<?php echo form_error('actualqty'); ?>
+								</div>
+							</div>
+							<div class="col-sm-4">
+								<small id="actualqtyhelp" class="form-text text-muted"></small>
 							</div>
 						</div>
 						<div class="form-group row">

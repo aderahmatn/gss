@@ -75,7 +75,7 @@
           </a>
           <div id="masterdata" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
             <div class="bg-white py-2 collapse-inner rounded">
-              <a class="collapse-item <?php echo $this->uri->segment(1) == 'barang' ? 'active': '' ?>" href="<?php echo site_url('barang') ?>"><i class="fas fa-cubes"></i>  Master Barang</a>
+              <a class="collapse-item <?php echo $this->uri->segment(1) == 'barang' ? 'active': '' ?>" href="<?php echo site_url('barang') ?>"><i class="fas fa-cubes"></i>  Master Part</a>
               <a class="collapse-item <?php echo $this->uri->segment(1) == 'mesin' ? 'active': '' ?>" href="<?php echo site_url('mesin') ?>"><i class="fas fa-hammer"></i> Master Mesin</a>
               <a class="collapse-item <?php echo $this->uri->segment(1) == 'nospp' ? 'active': '' ?>" href="<?php echo site_url('nospp') ?>"><i class="fas fa-fw fa-crosshairs"></i> Master No SPP</a>
               <a class="collapse-item <?php echo $this->uri->segment(1) == 'users' ? 'active': '' ?>" href="<?php echo site_url('users') ?>"><i class="fas fa-fw fa-users"></i>  Master Karyawan</a>

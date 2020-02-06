@@ -48,7 +48,7 @@
 						<div class="form-group row">
 							<label for="qtyplan" class="col-sm-2 col-form-label-sm">Quantity Plannning</label>
 							<div class="col-sm-6">
-								<input type="number" class="form-control form-control-sm <?php echo form_error('qtyplan')?'is-invalid':''?>" name="qtyplan" id="qtyplan" autocomplete="off" aria-describedby="qtyplanhelp" value="<?=set_value('qtyplan')?>" >
+								<input type="text" class="form-control form-control-sm <?php echo form_error('qtyplan')?'is-invalid':''?>" name="qtyplan" id="qtyplan" autocomplete="off" aria-describedby="qtyplanhelp" value="<?=set_value('qtyplan')?>" >
 								<div class="invalid-feedback">
 									<?php echo form_error('qtyplan'); ?>
 								</div>

@@ -9,6 +9,7 @@ class Barcode_m extends CI_Model {
 	public $IdSpp;
 	public $Date;
 	public $Lot;
+	public $ActualQty;
 
 	public function rules()
 	{
@@ -17,6 +18,10 @@ class Barcode_m extends CI_Model {
 			['field' => 'lotno',
 			'label' => 'Kode Shif',
 			'rules' => 'required'],
+
+			['field' => 'actualqty',
+			'label' => 'Actual Quantity',
+			'rules' => 'required|numeric'],
 
 			['field' => 'idspp',
 			'label' => 'No SPP',
@@ -58,6 +63,7 @@ class Barcode_m extends CI_Model {
 		$this->IdSpp = $post['idspp'];
 		$this->Date = $post['date'];
 		$this->Lot = $post['lotno'];
+		$this->ActualQty = $post['actualqty'];
 		$this->db->insert($this->_table, $this);
 	}
 
