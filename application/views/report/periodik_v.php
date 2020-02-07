@@ -1,7 +1,7 @@
 <!-- DataTales Example -->
 <div class="card shadow mb-4">
 	<div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-		<h6 class="m-0 font-weight-bold text-primary">Laporan Periodik</h6>
+		<h6 class="m-0 font-weight-bold text-primary">Laporan SPB Periodik</h6>
 		<div class="button">
 			<form method="post" action="<?=base_url('report/exportPeriodik') ?>">
 				<input type="hidden" name="tgl1" value="<?=$tgl1 ?>">

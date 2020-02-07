@@ -51,7 +51,7 @@
       <li class="nav-item <?php echo $this->uri->segment(1) == 'dashboard' ? 'active': '' ?>">
         <a class="nav-link" href="<?php echo base_url('dashboard'); ?>">
           <i class="fas fa-fw fa-tachometer-alt"></i>
-          <span>Dashboard</span></a>
+          <span>Halaman Utama</span></a>
         </li>
 
         <!-- Divider -->
@@ -97,13 +97,13 @@
           <li class="nav-item <?php echo $this->uri->segment(1) == 'report' ? 'active': '' ?>">
             <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#report" aria-expanded="true" aria-controls="report">
               <i class="fas fa-file-alt"></i>
-              <span>Report</span>
+              <span>Laporan</span>
             </a>
             <div id="report" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
               <div class="bg-white py-2 collapse-inner rounded">
-                <a class="collapse-item <?php echo $this->uri->segment(2) == 'periodik' ? 'active': '' ?>" href="<?php echo site_url('report/periodik') ?>"><i class="fas fa-calendar"></i>  Report Periodik</a>
+                <a class="collapse-item <?php echo $this->uri->segment(2) == 'periodik' ? 'active': '' ?>" href="<?php echo site_url('report/periodik') ?>"><i class="fas fa-calendar"></i>  Laporan SPB Periodik</a>
 
-                <a class="collapse-item <?php echo $this->uri->segment(2) == 'stok' ? 'active': '' ?>" href="<?php echo site_url('report/stok') ?>"><i class="fas fa-fw fa-cubes"></i> Report Stok</a>
+                <a class="collapse-item <?php echo $this->uri->segment(2) == 'stok' ? 'active': '' ?>" href="<?php echo site_url('report/stok') ?>"><i class="fas fa-fw fa-cubes"></i> Laporan SPB Per-Part</a>
               </div>
             </div>
           </li>
@@ -124,13 +124,13 @@
           <li class="nav-item <?php echo $this->uri->segment(1) == 'report' ? 'active': '' ?>">
             <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#report" aria-expanded="true" aria-controls="report">
               <i class="fas fa-file-alt"></i>
-              <span>Report</span>
+              <span>Laporan</span>
             </a>
             <div id="report" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
               <div class="bg-white py-2 collapse-inner rounded">
-                <a class="collapse-item <?php echo $this->uri->segment(2) == 'periodik' ? 'active': '' ?>" href="<?php echo site_url('report/periodik') ?>"><i class="fas fa-calendar"></i>  Report Periodik</a>
+                <a class="collapse-item <?php echo $this->uri->segment(2) == 'periodik' ? 'active': '' ?>" href="<?php echo site_url('report/periodik') ?>"><i class="fas fa-calendar"></i>  Laporan Periodik</a>
 
-                <a class="collapse-item <?php echo $this->uri->segment(2) == 'stok' ? 'active': '' ?>" href="<?php echo site_url('report/stok') ?>"><i class="fas fa-fw fa-cubes"></i> Report Stok</a>
+                <a class="collapse-item <?php echo $this->uri->segment(2) == 'stok' ? 'active': '' ?>" href="<?php echo site_url('report/stok') ?>"><i class="fas fa-fw fa-cubes"></i> Laporan StPer-Part</a>
               </div>
             </div>
           </li>
