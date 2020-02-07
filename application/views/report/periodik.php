@@ -11,6 +11,9 @@
 			<!-- Card Content - Collapse -->
 			<div class="collapse show" id="createProduct">
 				<div class="card-body">
+					<div class="alert alert-primary" role="alert"><i class="fas fa-info-circle"></i>
+						Silahkan masukan tanggal awal dan tanggal akhir untuk menampilkan laporan.
+					</div>
 					<form action="<?=base_url('report/tampilPeriodik') ?>" method="post">
 						<div class="row">
 							<div class="col-4">

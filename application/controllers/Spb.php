@@ -78,7 +78,7 @@ class Spb extends CI_Controller {
         // mencetak string 
 		$pdf->Cell(190,7,'SURAT PENYERAHAN BARANG',0,1,'C');
 		$pdf->SetFont('Arial','',8);
-		$pdf->Cell(100,5,'Ke : Gudang Barang Jadi',0,0,'L');
+		$pdf->Cell(100,5,'Ke : Gudang Finish Good',0,0,'L');
 		$pdf->Cell(92,5,'Tgl Cetak : '.date('d/m/Y'),0,1,'R');
 		$pdf->SetFont('Arial','B',12);
         // Memberikan space kebawah agar tidak terlalu rapat
@@ -122,9 +122,8 @@ class Spb extends CI_Controller {
 		$pdf->Cell(192,10,'',0,1);
 
 		$pdf->Cell(50,6,'(Leader Produksi)',0,0,'C');
-		$pdf->Cell(45,6,'(Leader GuDel)',0,0,'C');
-		$pdf->Cell(45,6,'(Reach Truck)',0,0,'C');
-		$pdf->Cell(52,6,'(Data Entry)',0,1,'C');
+		$pdf->Cell(90,6,'(Adm. Finish Good)',0,0,'C');
+		$pdf->Cell(52,6,'(Opt. Handling)',0,1,'C');
 
 		$pdf->Output();
 	}

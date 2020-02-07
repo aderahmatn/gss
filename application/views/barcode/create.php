@@ -53,7 +53,7 @@
 						<div class="form-group row">
 							<label for="date" class="col-sm-2 col-form-label-sm">Lot No</label>
 							<div class="col-sm-2">
-								<input type="text" class="form-control form-control-sm" name="date" id="date" autocomplete="off" aria-describedby="date" value="<?=date('d/m/Y') ?>" readonly>
+								<input type="text" class="form-control form-control-sm" name="date" id="date" autocomplete="off" aria-describedby="date" value="<?=date('Y-m-d') ?>" readonly>
 							</div>
 							<div class="col-sm-2">
 								<input type="text" class="form-control form-control-sm <?php echo form_error('lotno')?'is-invalid':''?>" name="lotno" id="lotno" autocomplete="off" aria-describedby="lotno" value="">
