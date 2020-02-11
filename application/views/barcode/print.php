@@ -17,7 +17,7 @@
 				<div class="card-body">
 					<div id="printableArea">
 						<div class="row">
-							<div class="col-5">
+							<div class="col-6">
 								<!-- Collapsable Card -->
 								<div class="card border-dark mb-4">
 									<!-- Card Header - Accordion -->
@@ -54,7 +54,7 @@
 											</table>
 											<?php 
 											$generator = new \Picqer\Barcode\BarcodeGeneratorPNG();
-											echo '<img src="data:image/png;base64,' . base64_encode($generator->getBarcode($barcode->idbarcode, $generator::TYPE_CODE_128,1.3,40)) . '">';
+											echo '<img src="data:image/png;base64,' . base64_encode($generator->getBarcode($barcode->idbarcode, $generator::TYPE_CODE_128)) . '">';
 											echo strtoupper($barcode->idbarcode) ;
 											?>
 										</div>
