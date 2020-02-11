@@ -23,8 +23,7 @@ class Nospp extends CI_Controller {
 	{
 		$this->form_validation->set_message('required','%s tidak boleh kosong!');
 		$this->form_validation->set_message('numeric','%s harus berupa angka!');
-		$nospp = $this->nospp_m;
-		$validation = $this->form_validation;
+		$nospp = $this->nospp_m; $validation = $this->form_validation;
 		$validation->set_rules($nospp->rules());
 
 		if ($validation->run() == FALSE)

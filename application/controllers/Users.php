@@ -21,7 +21,6 @@ class Users extends CI_Controller {
 		$this->form_validation->set_rules('nik', 'NIK', 'trim|required|min_length[5]|max_length[7]|numeric');
 		$this->form_validation->set_rules('fullname', 'Nama Lengkap', 'trim|required');
 		$this->form_validation->set_rules('gender', 'Jenis Kelamin', 'trim|required');
-
 		$this->form_validation->set_rules('username', 'Username', 'trim|required|min_length[5]|is_unique[tusers.Username]');
 		$this->form_validation->set_rules('password', 'Password', 'trim|required|min_length[5]');
 		$this->form_validation->set_rules('confpassword', 'Konfirmasi Password', 'trim|required|min_length[5]|matches[password]');

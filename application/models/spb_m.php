@@ -73,6 +73,11 @@ class Spb_m extends CI_Model {
 		return $query->result();
 	}
 
+	public function deleteIfDouble($id, $barcode)
+	{
+		return $this->db->delete($this->_table, array('IdSpb' => $id, 'IdBarcode' => $barcode));
+	}
+
 	public function delete($id)
 	{
 		return $this->db->delete($this->_table, array('IdSpb' => $id));

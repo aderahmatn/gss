@@ -49,17 +49,42 @@ class Spb extends CI_Controller {
 
 	public function scanbar()
 	{
-		$spb = $this->spb_m;
-		$post = $this->input->post(null, TRUE);
-		$spb->add($post);
-		$id=$this->input->post('id');
-		$data['scan'] = $this->spb_m->getById($id);
-		$data['val'] = $this->input->post(null, TRUE);
-		if ($this->db->affected_rows() > 0) {
-			$this->session->set_flashdata('success', 'Scan berhasil');
-			$this->template->load('shared/template', 'spb/scan',$data);
+		if ($_SERVER["REQUEST_METHOD"]=="POST") 
+		{
+			if (empty($_POST['barcode'])) {
+				$this->session->set_flashdata('error', 'Scan barcode gagal');
+				$id=$this->input->post('id');
+				$data['scan'] = $this->spb_m->getById($id);
+				$data['val'] = $this->input->post(null, TRUE);
+				$this->template->load('shared/template', 'spb/scan',$data);
+
+			}else {
+				$cek = $this->db->query("SELECT * FROM tbarcode WHERE idbarcode = '".$this->input->post('barcode')."'")->num_rows();
+				if ($cek<=0) {
+					$this->session->set_flashdata('error', 'Barcode tidak terdaftar');
+					$id=$this->input->post('id');
+					$data['scan'] = $this->spb_m->getById($id);
+					$data['val'] = $this->input->post(null, TRUE);
+					$this->template->load('shared/template', 'spb/scan',$data);
+				}else{
+					$spb = $this->spb_m;
+					$post = $this->input->post(null, TRUE);
+					$spb->add($post);
+					$id=$this->input->post('id');
+					$barcode=$this->input->post('barcode');
+					$data['scan'] = $this->spb_m->getById($id);
+					$data['val'] = $this->input->post(null, TRUE);
+					if ($this->db->affected_rows() > 0){
+						$this->session->set_flashdata('success', 'Scan berhasil!');
+						$this->template->load('shared/template', 'spb/scan',$data);
+					}
+				}
+			}
 		}
 	}
+
+
+
 
 	public function printSpb($id)
 	{
@@ -68,7 +93,7 @@ class Spb extends CI_Controller {
 			$this->session->set_flashdata('error', 'Data SPB tidak ditemukan!');
 			redirect('spb','refresh');
 		}
-		
+
 		$pdf = new FPDF('L','mm',array(212,120));
         // membuat halaman baru
 		$pdf->AddPage();
