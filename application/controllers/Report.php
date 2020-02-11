@@ -260,6 +260,7 @@ public function exportPeriodik()
     $write = PHPExcel_IOFactory::createWriter($excel, 'Excel2007'); 
     $write->save('php://output');   
 }
+}
 
 /* End of file Report.php */
 /* Location: ./application/controllers/Report.php */
