@@ -1,2 +1,2 @@
 # gss
-PT GSS By ADRN
+PT GSS  by ADRN
