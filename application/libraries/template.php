@@ -1,7 +1,5 @@
 <?php 
-/**
- * 
- */
+
 class Template
 {
 	var $template_data = array();
